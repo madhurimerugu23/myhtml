@@ -1,0 +1,30 @@
+<html>
+    <head>
+    <title>fact</title>
+
+</head>
+<script>
+    function factorial()
+    {
+        let fact=1;
+        //var v=parseInt(document.f1.no.value);
+        var v=document.f1.no.value;
+    for(i=v;i>=1;i--)
+{
+    fact*=i;
+}
+alert("factorial of " +v+ " is "+fact);
+    }
+
+</script>
+<body>
+    <form align=center name="f1">
+        factorial
+        <br>
+        <br>
+        <input type="number" name="no"><br>
+        <br>
+        <input type="button" value="factorial" onclick="factorial()">
+    </form>
+</body>
+</html>

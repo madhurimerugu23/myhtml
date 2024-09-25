@@ -1,0 +1,167 @@
+<html>
+
+<head>
+  <title>Registration Form</title>
+  
+        <h2>M.Madhuri<br>
+        23255A0505</h2>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+   
+    }
+    form {
+      margin: 0 auto;
+      width: 50%;
+      padding: 20px;
+      font-size: 16px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+    }
+    label {
+      font-weight: bold;
+      width: 150px;
+      text-align: right;
+      margin-right: 10px;
+    }
+    input, select, textarea {
+      padding: 5px;
+      font-size: 14px;
+      width: 300px;
+    }
+    
+    #button {
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .radio-group {
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+    }
+    .gender-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .gender-wrapper label {
+      width: 150px;
+      text-align: right;
+      margin-right: 10px;
+    }
+  </style>
+  <script>
+    function validateForm(event) {
+      event.preventDefault();
+      
+      // Get the values from the form
+      var username = document.getElementById('firstname').value;
+      var password = document.getElementById('password').value;
+      var email = document.getElementById('email').value;
+      var phone = document.getElementById('phone').value;
+
+      // Regular expressions
+      var usernamePattern = /^[A-Za-z][A-Za-z0-9]*$/;
+      var passwordPattern = /^.{8,}$/;
+      var emailPattern = /^[a-zA-Z0-9.]+@gmail\.com$/;
+      var phonePattern = /^\d{10}$/;
+
+      // Validate Username
+      if (!usernamePattern.test(username)) {
+        alert('Username must start with an alphabet and contain only letters and numbers.');
+        return;
+      }
+
+      // Validate Password
+      if (!passwordPattern.test(password)) {
+        alert('Password must be at least 8 characters long.');
+        return;
+      }
+
+      // Validate Email
+      if (!emailPattern.test(email)) {
+        alert('Email must be of the form __@gmail.com');
+        return;
+      }
+
+      // Validate Phone Number
+      if (!phonePattern.test(phone)) {
+        alert('Phone number must be exactly 10 digits.');
+        return;
+      }
+
+      alert('Form submitted successfully!');
+    }
+
+    window.onload = function() {
+      document.getElementById('button').addEventListener('click', validateForm);
+    };
+  </script>
+</head>
+<body>
+  
+   
+    <h1>REGISTRATION FORM</h1>
+
+    <form>
+      <div class="form-group">
+        <label for="firstname">Username:</label>
+        <input type="text" id="firstname" name="firstname"/>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"/> 
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date-Of-Birth:</label>
+        <input type="date" id="dob" name="dob"/>
+      </div>
+
+      <div class="form-group gender-wrapper">
+        <label>Gender:</label>
+        <div class="radio-group">
+          <label><input type="radio" id="male" name="gender" value="male"> Male</label>
+          <label><input type="radio" id="female" name="gender" value="female"> Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-Mail:</label>
+        <input type="text" id="email" name="email"/>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Contact Number:</label>
+        <input type="tel" id="phone" name="phone"/>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button id="button">SUBMIT</button>
+      </div>
+    </form>
+</body>
+</html>

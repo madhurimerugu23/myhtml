@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>arraysort</title>
+    </head>
+    <script>
+        let a=[1,9,13,4,5];
+        let n=a.length;
+        for(i=0;i<n;i++)
+            {
+        for( j=i+1;j<n;j++)
+                {
+            if(a[i]>a[j])
+                {
+            temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
+                }
+
+            }
+            }
+         //   alert("Sorted array:"+ a);
+         for(let i of a)
+         {
+            //alert(i);
+           // document.writeln(i);
+          // document.write(i+" ");
+          document.write(i+"<br>")
+         }
+            </script>
+            <body></body>
+</html>
