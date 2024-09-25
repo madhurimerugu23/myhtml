@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digital Clock</title>
+</head>
+<body>
+  <style>
+    .time {
+      font-size: 50px; /* Font size for the clock display */
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Font family */
+      text-align: center; /* Center the text */
+      margin-top: 40px; /* Margin from the top */
+    }
+  </style>
+
+  <script>
+    function updateClock() {
+      const now = new Date(); // Get current date and time
+      let hours = now.getHours(); // Get current hours
+      let minutes = now.getMinutes(); // Get current minutes
+      let seconds = now.getSeconds(); // Get current seconds
+
+      // Format time as HH:MM:SS
+      hours = hours < 10 ? '0' + hours : hours;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+
+      const currentTime = `${hours}:${minutes}:${seconds}`;
+
+      // Clear the document and write the current time
+      document.open(); // Opens the document for writing
+      document.writeln(`<div class="time">${currentTime}</div>`);
+      document.close(); // Closes the document after writing
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+
+    // Initialize the clock display
+    updateClock();
+  </script>
+</body>
+</html>
