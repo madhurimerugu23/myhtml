@@ -1,0 +1,24 @@
+<html>
+    <head>
+        M.Madhuri 
+        <br>
+        23255A0505
+        <center>simple react program</center>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    </head>
+    <body bgcolor="skyblue">
+        <center><h3>
+            HELLO WORLD
+        </h3></center>
+        <div id="contents"></div>
+       
+        <script >
+          
+        const element =React.createElement('div',{title:'Outer div'},React.createElement('h3',null,'welcome'));
+        ReactDOM.render(element,document.getElementById('contents'));
+
+   </script> 
+
+    </body>
+</html>
