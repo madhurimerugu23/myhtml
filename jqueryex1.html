@@ -1,0 +1,30 @@
+<html>
+    <head>
+      jquery example
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function()
+{
+    flag=true;
+    setInterval(function(){
+
+        if(flag==true)
+        {
+            $("h1").hide();
+            flag=false;
+        }
+        else{
+            $("h1").show();
+            flag=true;
+        }
+        }
+    ,1000);
+})
+
+</script>
+<body bgcolor="skyblue"><h3> 23255A0505<br>M.Madhuri</h3>
+    <h1 align="center"> HIDE AND SHOW EXAMPLE </h1>
+    
+    </body>
+</html>
