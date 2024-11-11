@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Voting from './Voting';
+import Simple_calci from './Simple_calci.js';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Voting/>
+    <Simple_calci/>
   </React.StrictMode>
 );
 
